@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+    <RootNamespace>FunctionsTemplate</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Http.fs" Version="5.4.0" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.0.1" />
+    <PackageReference Include="Saturn" Version="0.15.0" />
+    <PackageReference Include="Saturn.AzureFunctions" Version="0.15.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HttpTrigger.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="local.settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
